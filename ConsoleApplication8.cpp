@@ -1,29 +1,32 @@
-// This program converts cm to m or km according to user query.
-//
-
-#include <iostream>
+//This program takes month number from user and prints out the number of days in that month//
+#include<iostream>
 using namespace std;
-
-int main()
-{
-    int distance;
-    char userchoice;
-    double distconvert;
-    cout << "Hello user please enter the distance";
-    cin >> distance;
-    cout << "pick a choice:" << endl;
-    cout << "1) meter " << endl;
-    cout << "2) kilometer " << endl;
-    cin >> userchoice;
-    if (userchoice == '1')
-    {
-        distconvert = distance / 100.0;
-         cout << "The distance in meters is:" << distconvert << endl;
-    }
-    else if (userchoice == '2')
-    { 
-        distconvert = distance / 100000.0;
-        cout << "The distance in Kilometers is:" << distconvert<< endl;
-    }
-
+int main() {
+	int num;
+	cout << "hello user please enter month number";
+	cin >> num;
+	switch (num)
+	{
+	case 4:
+	case 6:
+	case 9:
+	case 11:
+		cout << "30 days";
+		break;
+	case 2:
+		cout << "28 days";
+		break;
+	case 1:
+	case 3:
+	case 5:
+	case 7:
+	case 8:
+	case 10:
+	case 12:
+		cout << "31 days";
+		break;
+	default:
+		cout << "invalid month";
+	}
+	return 0;
 }
